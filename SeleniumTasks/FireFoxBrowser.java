@@ -11,14 +11,16 @@ public class FireFoxBrowser {
 		
 		WebDriver driver=new FirefoxDriver ();
 		
-		Thread.sleep(10000);
+		Thread.sleep(3000);
 		
 		driver.get("http://google.com/");
 		
 		driver.manage().window().maximize();
 	
 		
-		System.out.println("driver.current_url");
+		String currentUrl = driver.getCurrentUrl();
+		System.out.println("Current URL: " + currentUrl);
+
 		
 		driver.navigate().refresh();
 		
